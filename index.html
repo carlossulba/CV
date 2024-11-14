@@ -1,120 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Carlos Sulbaran - Personal Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Sulbaran - CV</title>
+  <style>
+    /* General styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Container for content */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Header styling */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      color: #666;
+      margin: 5px 0;
+    }
+
+    /* Section headings */
+    h3 {
+      color: #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    /* List styling */
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Contact section styling */
+    .contact-info ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Link styling */
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-  <img src="images\carlos sulbaran.JPG" alt="Carlos's profile picture">
+  <div class="container">
+    <!-- Header section -->
+    <div class="header">
+      <img src="media/carlos.jpeg" alt="Carlos's profile picture">
+      <h1>Carlos Sulbaran</h1>
+      <p>Computer Science Student</p>
+      <p>Dedicated student in Computer Science with a strong interest in computer security, artificial intelligence, and software development. Skilled in various programming languages and tools, committed to continual learning and professional growth.</p>
+    </div>
 
-  <h1>Carlos Sulbaran</h1>
-  <p><em>Computer Science Student</em></p>
-  <p>Dedicated computer science student with interest in web development, data analysis and software development. Experienced in building websites and troubleshooting issues with software. Possesses good organizational and communication skills.
-    Committed to expanding knowledge and learning on the job.</p>
-  <hr>
+    <h3>Education</h3>
+    <ul>
+      <li>Technische Universität Berlin — Bachelor of Science, Informatik (Expected: December 2024)</li>
+      <li>Technische Universität Berlin — Studienkolleg (July 2019)</li>
+      <li>Deutsche Schule Barranquilla — International Baccalaureate and Colombian National Abitur (July 2018)</li>
+    </ul>
 
-  <h3>Work Experience</h3>
-  <table>
-    <tr>
-      <td>April 2020 - March 2021</td>
-      <td><b>Subway</b></td>
-    </tr>
-    <tr>
-      <td>August 2019 - April 2020</td>
-      <td><b>BK Berlin Kaufhaus</b></td>
-    </tr>
-    <tr>
-      <td>Januar 2019 - Juni 2019</td>
-      <td><b>Aufsturz Restaurant</b></td>
-      </td>
-      <td></td>
-    </tr>
-  </table>
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>Programming: Python, Java, JavaScript, SQL, HTML</li>
+      <li>Tools: Nmap, Wireshark, BurpSuite, Metasploit, Scikit-learn, Yolov8</li>
+      <li>Network Protocols and Security Tools</li>
+    </ul>
 
-  <h3>Skills</h3>
-  <table>
-    <td>
-      <table>
-        <tr>
-          <td>HTML & CSS</td>
-        </tr>
-        <tr>
-          <td>JavaScript</td>
-        </tr>
-        <tr>
-          <td>Bootstrap</td>
-        </tr>
-        <tr>
-          <td>Vue.js</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table>
-        <tr>
-          <td>SQL</td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table>
-        <tr>
-          <td>Java</td>
-        </tr>
-        <tr>
-          <td>C Programming</td>
-        </tr>
-        <tr>
-          <td>Python</td>
-        </tr>
-      </table>
-    </td>
-  </table>
+    <h3>Work Experience</h3>
+    <ul>
+      <li><strong>Technische Universität Berlin — Tutor for Computability and Complexity</strong> (Oct 2023 - Present)
+        <ul>
+          <li>Conducted weekly classes and assisted students with exercises and explanations of key concepts.</li>
+          <li>Provided weekly office hours for individual student support.</li>
+        </ul>
+      </li>
+      <li><strong>TUMO — Coach</strong> (Aug 2022 - Present)
+        <ul>
+          <li>Supported self-guided learning in computer science fundamentals, focusing on algorithms and data structures.</li>
+          <li>Organized and assisted in workshops on programming, robotics, and game development for students.</li>
+        </ul>
+      </li>
+    </ul>
 
-  <h3>Education</h3>
-  <table>
-    <tr>
-      <td>Computer Science</td>
-      <td>Bachelor of Science</td>
-      <td>TU Berlin</td>
-      <td>2022</td>
-    </tr>
-  </table>
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>RoboCup - Computer Vision and Keyframe Interpolation</strong> (Jan 2023)
+        <ul>
+          <li>Developed a real-time computer vision system for a robot to recognize a tablet and identify the state of a Tic-Tac-Toe game.</li>
+          <li>Created keyframe animations to express robot "emotions" based on game progression.</li>
+        </ul>
+      </li>
+      <li><strong>Programming Project in Algorithms and Data Structures - Android App Development</strong> (Aug 2022)
+        <ul>
+          <li>Established communication between an Android app and a robot API to enable connectivity and basic instructions.</li>
+        </ul>
+      </li>
+    </ul>
 
-  <a href="https://www.coursera.org/">Coursera</a>
-  <ul>
-    <li>Machine Learning</li>
-    <li>Python</li>
-  </ul>
-  <a href="https://www.udemy.com/">Udemy</a>
-  <table>
-    <tr>
-      <td>Web Developing</td>
-      <td>Dr. Angela Yu</td>
-    </tr>
-    <tr>
-      <td>Machine Learning</td>
-      <td>Hadelin de Ponteves</td>
-    </tr>
-    <tr>
-      <td>Ethical Hacking</td>
-      <td>Zaid Sabih</td>
-    </tr>
-  </table>
+    <h3>Additional Information</h3>
+    <ul>
+      <li>Languages: Spanish (C2), English (C1), German (C1)</li>
+      <li>Personal Interests: Computer Security, Artificial Intelligence</li>
+      <li>Recipient of the Andrés Bello Award for the highest regional score on the national exam.</li>
+    </ul>
 
-  <h3>Languages</h3>
-  <ul>
-    <li>Spanish C2</li>
-    <li>English C1</li>
-    <li>German C1</li>
-    <li>French A2</li>
-  </ul>
-  <h3><a href="hobbies.html">Hobbies</a></h3>
+    <h3>Contact</h3>
+    <div class="contact-info">
+      <ul>
+        <li>Email: <a href="mailto:carlossulba000@gmail.com">carlossulba000@gmail.com</a></li>
+        <li>Phone: +49 1787 888029</li>
+      </ul>
+    </div>
 
-  <h3><a href="contact.html">Contact Me</a></h3>
-
+  </div>
 </body>
 
 </html>
