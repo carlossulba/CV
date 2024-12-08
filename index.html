@@ -6,157 +6,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carlos Sulbaran - CV</title>
   <style>
-    /* General styling */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
+      background-color: #f9f9f9;
+      color: #000;
     }
 
-    /* Container for content */
     .container {
       max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
+      margin: 40px auto;
+      padding: 30px;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
     }
 
-    /* Header styling */
-    .header {
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .contact {
       text-align: center;
       margin-bottom: 20px;
     }
 
-    .header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .header h1 {
-      font-size: 2em;
-      margin: 0;
-    }
-
-    .header p {
-      font-size: 1.2em;
-      color: #666;
+    .contact p {
       margin: 5px 0;
+      font-size: 0.9em;
     }
 
-    /* Section headings */
-    h3 {
-      color: #4CAF50;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 5px;
+    .contact a {
+      color: #01a30f;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-picture {
+      width: 200px;
+      height: 125px; /* 16:10 aspect ratio */
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #01810c;
+      /* color: #01810c; */
       margin-top: 30px;
+      padding-bottom: 5px;
+      font-size: 1.4em;
     }
 
-    /* List styling */
+    .section-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
     ul {
-      list-style-type: none;
-      padding: 0;
+      list-style-type: disc;
+      padding-left: 20px;
     }
 
     ul li {
       margin-bottom: 10px;
     }
 
-    /* Contact section styling */
-    .contact-info ul {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    p,
+    li {
+      font-size: 0.95em;
     }
 
-    /* Link styling */
-    a {
-      color: #4CAF50;
-      text-decoration: none;
+    table {
+      width: 100%;
+      margin-top: 10px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    table td {
+      padding: 5px 0;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <!-- Header section -->
-    <div class="header">
-      <img src="media/carlos.jpeg" alt="Carlos's profile picture">
-      <h1>Carlos Sulbaran</h1>
-      <p>Computer Science Student</p>
-      <p>Dedicated student in Computer Science with a strong interest in computer security, artificial intelligence, and software development. Skilled in various programming languages and tools, committed to continual learning and professional growth.</p>
+    <h1>Carlos Sulbaran Fandino</h1>
+    <div class="contact">
+      <p>Siegmunds Hof 2, 10555 Berlin</p>
+      <p>Email: <a href="mailto:c.sulbaranfandino@gmail.com">c.sulbaranfandino@gmail.com</a> | Phone: +49 174 788 8029</p>
+      <p><a href="https://www.linkedin.com/in/carlos-sulbaran-fandino">LinkedIn</a> | <a href="https://github.com/carlossulba">GitHub</a></p>
+      <img src="media/carlos.jpg" alt="Carlos Sulbaran Profile Picture" class="profile-picture">
     </div>
+    
+    <!-- PROFILE -->
+    <h2>Profile</h2>
+    <p>Motivated computer science student with experience in programming, data analysis, and tutoring. Skilled in Python programming, with a strong interest in machine learning, reinforcement learning, and computer vision. I also like astronomy.</p>
 
-    <h3>Education</h3>
+    <!-- EXPERIENCE -->
+    <h2>Experience</h2>
+    <p class="section-title">Student Assistant, Technische Universität Berlin</p>
+    <p><em>Oct. 2023 – Present</em></p>
     <ul>
-      <li>Technische Universität Berlin — Bachelor of Science, Informatik (Expected: December 2024)</li>
-      <li>Technische Universität Berlin — Studienkolleg (July 2019)</li>
-      <li>Deutsche Schule Barranquilla — International Baccalaureate and Colombian National Abitur (July 2018)</li>
+      <li>Tutoring students in Computability and Complexity, Algorithms and Data Structures, and Scientific Computing.</li>
     </ul>
 
-    <h3>Technical Skills</h3>
+    <p class="section-title">Coach, TUMO</p>
+    <p><em>Aug. 2022 – May 2024</em></p>
     <ul>
-      <li>Programming: Python, Java, JavaScript, SQL, HTML</li>
-      <li>Tools: Nmap, Wireshark, BurpSuite, Metasploit, Scikit-learn, Yolov8</li>
-      <li>Network Protocols and Security Tools</li>
+      <li>Mentoring teenagers in creative technologies, including robotics, programming, and digital modeling.</li>
+      <li>Assisting during workshops on programming, robotics, and game development.</li>
     </ul>
 
-    <h3>Work Experience</h3>
+    <p class="section-title">Data Analysis Intern, Luther</p>
+    <p><em>Aug. 2021 – Aug. 2022</em></p>
     <ul>
-      <li><strong>Technische Universität Berlin — Tutor for Computability and Complexity</strong> (Oct 2023 - Present)
-        <ul>
-          <li>Conducted weekly classes and assisted students with exercises and explanations of key concepts.</li>
-          <li>Provided weekly office hours for individual student support.</li>
-        </ul>
-      </li>
-      <li><strong>TUMO — Coach</strong> (Aug 2022 - Present)
-        <ul>
-          <li>Supported self-guided learning in computer science fundamentals, focusing on algorithms and data structures.</li>
-          <li>Organized and assisted in workshops on programming, robotics, and game development for students.</li>
-        </ul>
-      </li>
+      <li>Collecting and organizing data to enable rapid preparation of legal documents.</li>
+      <li>Conducting data comparison for validity checks, ensuring accuracy in deliverables for various projects.</li>
     </ul>
 
-    <h3>Projects</h3>
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+    <p class="section-title">Mobile Fingerprinting Study - Bachelor Thesis</p>
+    <p><em>Technische Universität Berlin | In Progress</em></p>
     <ul>
-      <li><strong>RoboCup - Computer Vision and Keyframe Interpolation</strong> (Jan 2023)
-        <ul>
-          <li>Developed a real-time computer vision system for a robot to recognize a tablet and identify the state of a Tic-Tac-Toe game.</li>
-          <li>Created keyframe animations to express robot "emotions" based on game progression.</li>
-        </ul>
-      </li>
-      <li><strong>Programming Project in Algorithms and Data Structures - Android App Development</strong> (Aug 2022)
-        <ul>
-          <li>Established communication between an Android app and a robot API to enable connectivity and basic instructions.</li>
-        </ul>
-      </li>
+      <li>Conceptualized and organized the entire project, including planning the experiment, collecting data, defining evaluations, and discussing applications.</li>
+      <li>Trained and evaluated classifiers for mobile device fingerprinting.</li>
     </ul>
 
-    <h3>Additional Information</h3>
+    <p class="section-title">Jump-Sturdy - Gaming AI</p>
+    <p><em>Technische Universität Berlin | July 2024</em></p>
     <ul>
-      <li>Languages: Spanish (C2), English (C1), German (C1)</li>
-      <li>Personal Interests: Computer Security, Artificial Intelligence</li>
-      <li>Recipient of the Andrés Bello Award for the highest regional score on the national exam.</li>
+      <li>Led a team in designing and implementing an AI agent capable of playing 'Jump Sturdy' using symbolic AI techniques.</li>
     </ul>
 
-    <h3>Contact</h3>
-    <div class="contact-info">
-      <ul>
-        <li>Email: <a href="mailto:carlossulba000@gmail.com">carlossulba000@gmail.com</a></li>
-        <li>Phone: +49 1787 888029</li>
-      </ul>
-    </div>
+    <p class="section-title">RoboCup – Computer Vision</p>
+    <p><em>Technische Universität Berlin | Dec. 2023</em></p>
+    <ul>
+      <li>Developed a real-time computer vision system to analyze Tic-Tac-Toe game states on a tablet.</li>
+      <li>Implemented interactive robot behaviors and animations to express emotions and respond to gameplay.</li>
+    </ul>
 
+    <p class="section-title">Android Programming Project</p>
+    <p><em>Technische Universität Berlin | Aug 2022</em></p>
+    <ul>
+      <li>Built communication between an Android app and a robot’s API.</li>
+      <li>Streamlined connections and commands to improve user experience.</li>
+    </ul>
+
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <td><em>Oct. 2019 – Present</em></td>
+        <td><strong>B.Sc. Computer Science</strong></td>
+        <td>Technische Universität Berlin</td>
+      </tr>
+    </table>
+
+    <!-- SKILLS -->
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, Java, JavaScript, C</li>
+      <li><strong>Frameworks:</strong> Scikit-learn, Yolov8, PyTorch</li>
+    </ul>
+
+    <!-- ADDITIONAL INFORMATION -->
+    <h2>Additional Information</h2>
+    <ul>
+      <li><strong>Languages:</strong> Spanish (Native), English (Fluent), German (Fluent)</li>
+      <li><strong>Awards:</strong> Andrés Bello Award for highest regional score in state exams</li>
+      <li><strong>Interests:</strong> Cybersecurity, Artificial Intelligence, 3D Modelling</li>
+    </ul>
   </div>
 </body>
 
