@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Interactive CV - Carlos Sulbaran
+# 🌐 Carlos Sulbaran Fandino
 
 ### [Click here to view my CV](https://carlossulba.github.io/CV/)
 
