@@ -1,5 +1,9 @@
-# CV
+<div align="center">
 
-This repository hosts my CV in a PDF file. You can view or download it from the link below:
+# 🌐 Interactive CV - Carlos Sulbaran
 
-[View CV](https://carlossulba.github.io/CV/index.html)
+### [Click here to view my CV](https://carlossulba.github.io/CV/)
+
+[![CV Website](https://img.shields.io/badge/CV-Website-green?style=for-the-badge)](https://carlossulba.github.io/CV/)
+
+</div>
