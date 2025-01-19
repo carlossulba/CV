@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carlos Sulbaran - CV</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
     body {
       font-family: "Times New Roman", Times, serif;
@@ -15,59 +16,98 @@
       color: #000;
     }
 
+    .header {
+      background-color: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #01810c;
+    }
+
+    .header-links a {
+      margin-left: 20px;
+      color: #01a30f;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 30px;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .contact p {
-      margin: 5px 0;
-      font-size: 0.9em;
-    }
-
-    .contact a {
-      color: #01a30f;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
+    .profile-section {
+      grid-column: 1;
+      position: sticky;
+      top: 100px;
+      align-self: start;
     }
 
     .profile-picture {
-      width: 200px;
-      height: 125px; /* 16:10 aspect ratio */
-      object-fit: cover;
+      width: 100%;
       border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    h2 {
-      border-bottom: 2px solid #01810c;
-      /* color: #01810c; */
-      margin-top: 30px;
-      padding-bottom: 5px;
-      font-size: 1.4em;
+    .main-content {
+      grid-column: 2;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-header {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-header:hover {
+      background-color: #e9e9e9;
+    }
+
+    .section-content {
+      display: none;
+      padding: 15px;
+    }
+
+    .section-content.active {
+      display: block;
     }
 
     .section-title {
       font-weight: bold;
       font-size: 1.1em;
       margin-bottom: 5px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #01810c;
+      margin-top: 0;
+      padding-bottom: 5px;
+      font-size: 1.4em;
     }
 
     ul {
@@ -79,8 +119,7 @@
       margin-bottom: 10px;
     }
 
-    p,
-    li {
+    p, li {
       font-size: 0.95em;
     }
 
@@ -92,99 +131,180 @@
     table td {
       padding: 5px 0;
     }
+
+    .dropdown-arrow {
+      border: solid #01810c;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      transition: transform 0.3s;
+    }
+
+    .section-header.active .dropdown-arrow {
+      transform: rotate(-135deg);
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="header">
     <h1>Carlos Sulbaran Fandino</h1>
-    <div class="contact">
-      <p>Siegmunds Hof 2, 10555 Berlin</p>
-      <p>Email: <a href="mailto:c.sulbaranfandino@gmail.com">c.sulbaranfandino@gmail.com</a> | Phone: +49 174 788 8029</p>
-      <p><a href="https://www.linkedin.com/in/carlos-sulbaran-fandino">LinkedIn</a> | <a href="https://github.com/carlossulba">GitHub</a></p>
-      <img src="media/carlos.jpeg" alt="Carlos Sulbaran Profile Picture" class="profile-picture">
+    <div class="header-links">
+      <a href="mailto:c.sulbaranfandino@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/carlos-sulbaran-fandino">LinkedIn</a>
+      <a href="https://github.com/carlossulba">GitHub</a>
+      <a href="https://linktr.ee/c.sulbaran.fandino">Linktree</a>
     </div>
-    
-    <!-- PROFILE -->
-    <h2>Profile</h2>
-    <p>Motivated computer science student with experience in programming, data analysis, and tutoring. Skilled in Python programming, with a strong interest in machine learning, reinforcement learning, and computer vision. I also like astronomy.</p>
-
-    <!-- EXPERIENCE -->
-    <h2>Experience</h2>
-    <p class="section-title">Student Assistant, Technische Universität Berlin</p>
-    <p><em>Oct. 2023 – Present</em></p>
-    <ul>
-      <li>Tutoring students in Computability and Complexity, Algorithms and Data Structures, and Scientific Computing.</li>
-    </ul>
-
-    <p class="section-title">Coach, TUMO</p>
-    <p><em>Aug. 2022 – May 2024</em></p>
-    <ul>
-      <li>Mentoring teenagers in creative technologies, including robotics, programming, and digital modeling.</li>
-      <li>Assisting during workshops on programming, robotics, and game development.</li>
-    </ul>
-
-    <p class="section-title">Data Analysis Intern, Luther</p>
-    <p><em>Aug. 2021 – Aug. 2022</em></p>
-    <ul>
-      <li>Collecting and organizing data to enable rapid preparation of legal documents.</li>
-      <li>Conducting data comparison for validity checks, ensuring accuracy in deliverables for various projects.</li>
-    </ul>
-
-    <!-- PROJECTS -->
-    <h2>Projects</h2>
-    <p class="section-title">Mobile Fingerprinting Study - Bachelor Thesis</p>
-    <p><em>Technische Universität Berlin | In Progress</em></p>
-    <ul>
-      <li>Conceptualized and organized the entire project, including planning the experiment, collecting data, defining evaluations, and discussing applications.</li>
-      <li>Trained and evaluated classifiers for mobile device fingerprinting.</li>
-    </ul>
-
-    <p class="section-title">Jump-Sturdy - Gaming AI</p>
-    <p><em>Technische Universität Berlin | July 2024</em></p>
-    <ul>
-      <li>Led a team in designing and implementing an AI agent capable of playing 'Jump Sturdy' using symbolic AI techniques.</li>
-    </ul>
-
-    <p class="section-title">RoboCup – Computer Vision</p>
-    <p><em>Technische Universität Berlin | Dec. 2023</em></p>
-    <ul>
-      <li>Developed a real-time computer vision system to analyze Tic-Tac-Toe game states on a tablet.</li>
-      <li>Implemented interactive robot behaviors and animations to express emotions and respond to gameplay.</li>
-    </ul>
-
-    <p class="section-title">Android Programming Project</p>
-    <p><em>Technische Universität Berlin | Aug 2022</em></p>
-    <ul>
-      <li>Built communication between an Android app and a robot’s API.</li>
-      <li>Streamlined connections and commands to improve user experience.</li>
-    </ul>
-
-    <!-- EDUCATION -->
-    <h2>Education</h2>
-    <table>
-      <tr>
-        <td><em>Oct. 2019 – Present</em></td>
-        <td><strong>B.Sc. Computer Science</strong></td>
-        <td>Technische Universität Berlin</td>
-      </tr>
-    </table>
-
-    <!-- SKILLS -->
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming Languages:</strong> Python, Java, JavaScript, C</li>
-      <li><strong>Frameworks:</strong> Scikit-learn, Yolov8, PyTorch</li>
-    </ul>
-
-    <!-- ADDITIONAL INFORMATION -->
-    <h2>Additional Information</h2>
-    <ul>
-      <li><strong>Languages:</strong> Spanish (Native), English (Fluent), German (Fluent)</li>
-      <li><strong>Awards:</strong> Andrés Bello Award for highest regional score in state exams</li>
-      <li><strong>Interests:</strong> Cybersecurity, Artificial Intelligence, 3D Modelling</li>
-    </ul>
   </div>
+
+  <div class="container">
+    <div class="profile-section">
+      <img src="media/carlos.jpg" alt="Carlos Sulbaran Profile Picture" class="profile-picture">
+    </div>
+
+    <div class="main-content">
+      <div class="section">
+        <div class="section-header">
+          <h2>Profile</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <p>Motivated computer science student with experience in programming, data analysis, and tutoring. Skilled in Python programming, with a strong interest in machine learning, reinforcement learning, and computer vision. I also like astronomy.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <p class="section-title">Student Assistant, Technische Universität Berlin</p>
+          <p><em>Oct. 2023 – Present</em></p>
+          <ul>
+            <li>Tutoring students in Computability and Complexity, Algorithms and Data Structures, and Scientific Computing.</li>
+          </ul>
+
+          <p class="section-title">Coach, TUMO</p>
+          <p><em>Aug. 2022 – May 2024</em></p>
+          <ul>
+            <li>Mentoring teenagers in creative technologies, including robotics, programming, and digital modeling.</li>
+            <li>Assisting during workshops on programming, robotics, and game development.</li>
+          </ul>
+
+          <p class="section-title">Data Analysis Intern, Luther</p>
+          <p><em>Aug. 2021 – Aug. 2022</em></p>
+          <ul>
+            <li>Collecting and organizing data to enable rapid preparation of legal documents.</li>
+            <li>Conducting data comparison for validity checks, ensuring accuracy in deliverables for various projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Similar sections for Projects, Education, Skills, and Additional Information -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <!-- Your existing projects content -->
+          <p class="section-title">Mobile Fingerprinting Study - Bachelor Thesis</p>
+          <p><em>Technische Universität Berlin | In Progress</em></p>
+          <ul>
+            <li>Conceptualized and organized the entire project, including planning the experiment, collecting data, defining evaluations, and discussing applications.</li>
+            <li>Trained and evaluated classifiers for mobile device fingerprinting.</li>
+          </ul>
+
+          <p class="section-title">Jump-Sturdy - Gaming AI</p>
+          <p><em>Technische Universität Berlin | July 2024</em></p>
+          <ul>
+            <li>Led a team in designing and implementing an AI agent capable of playing 'Jump Sturdy' using symbolic AI techniques.</li>
+          </ul>
+
+          <p class="section-title">RoboCup – Computer Vision</p>
+          <p><em>Technische Universität Berlin | Dec. 2023</em></p>
+          <ul>
+            <li>Developed a real-time computer vision system to analyze Tic-Tac-Toe game states on a tablet.</li>
+            <li>Implemented interactive robot behaviors and animations to express emotions and respond to gameplay.</li>
+          </ul>
+
+          <p class="section-title">Android Programming Project</p>
+          <p><em>Technische Universität Berlin | Aug 2022</em></p>
+          <ul>
+            <li>Built communication between an Android app and a robot's API.</li>
+            <li>Streamlined connections and commands to improve user experience.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Education</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <table>
+            <tr>
+              <td><em>Oct. 2019 – Present</em></td>
+              <td><strong>B.Sc. Computer Science</strong></td>
+              <td>Technische Universität Berlin</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <ul>
+            <li><strong>Programming Languages:</strong> Python, Java, JavaScript, C</li>
+            <li><strong>Frameworks:</strong> Scikit-learn, Yolov8, PyTorch</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <h2>Additional Information</h2>
+          <span class="dropdown-arrow"></span>
+        </div>
+        <div class="section-content">
+          <ul>
+            <li><strong>Languages:</strong> Spanish (Native), English (Fluent), German (Fluent)</li>
+            <li><strong>Awards:</strong> Andrés Bello Award for highest regional score in state exams</li>
+            <li><strong>Interests:</strong> Cybersecurity, Artificial Intelligence, 3D Modelling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.section-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isActive = header.classList.contains('active');
+        
+        // Close all sections
+        document.querySelectorAll('.section-header').forEach(h => h.classList.remove('active'));
+        document.querySelectorAll('.section-content').forEach(c => c.classList.remove('active'));
+        
+        // Open clicked section if it wasn't active
+        if (!isActive) {
+          header.classList.add('active');
+          content.classList.add('active');
+        }
+      });
+    });
+
+    // Open the first section by default
+    document.querySelector('.section-header').click();
+  </script>
 </body>
 
 </html>
