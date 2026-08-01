@@ -2,8 +2,8 @@
 
 # 🌐 Carlos Sulbaran Fandino
 
-### [Click here to view my CV](https://carlossulba.github.io/CV/)
+### [Click here to view my Homepage](https://carlossulba.github.io/Homepage/)
 
-[![CV Website](https://img.shields.io/badge/CV-Website-0057B8?style=for-the-badge)](https://carlossulba.github.io/CV/)
+[![Homepage Website](https://img.shields.io/badge/Homepage-Website-0057B8?style=for-the-badge)](https://carlossulba.github.io/Homepage/)
 
 </div>
